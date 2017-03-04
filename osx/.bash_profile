@@ -7,11 +7,15 @@ export PATH="$PATH:"/Applications/microchip/xc8/v1.41/bin""
 
 # added by Anaconda3 4.3.0 installer
 #export PATH="/Users/andrejsorokin/anaconda/bin:$PATH"
-function tmuxer () {
+
+function tmuxer ()
+{
 tmux attach -t base || tmux new -s base
 }
 
 function confsaver () {
-
-cp
+CONFDEST=~/Projects/linux-conf/osx
+cp ~/.tmux.conf $CONFDEST
+cp ~/.bash_profile $CONFDEST
+cp ~/.zshrc $CONFDEST
 }
