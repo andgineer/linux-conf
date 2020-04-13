@@ -21,3 +21,15 @@ RUN apt-get install -y wget bzip2 libgl1-mesa-glx libegl1-mesa libxrandr2 libxra
     && ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh \
     && echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc \
     && echo "conda activate base" >> ~/.bashrc
+
+# tmuximator
+RUN apt-get install -y tmux ruby-dev build-essential libssl-dev libreadline-dev zlib1g-dev \
+    && curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash \
+    && echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc \
+    && rbenv install 2.5.7 \
+    && rbenv global 2.5.7 \
+    && gem install tmuxinator \
+    && echo "export EDITOR='nano'" >> ~/.bashrc \
+    && eval "$(rbenv init -)" >> ~/.bashrc \
+    && wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -O /etc/bash_completion.d/tmuxinator.bash
+
