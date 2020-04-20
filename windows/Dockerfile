@@ -33,3 +33,10 @@ RUN apt-get install -y tmux ruby-dev build-essential libssl-dev libreadline-dev 
     && wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -O /etc/bash_completion.d/tmuxinator.bash \
     && curl https://raw.githubusercontent.com/andgineer/linux-conf/master/linux/.tmux.conf -o ~/.tmux.conf
 
+# Micro
+RUN curl https://getmic.ro | bash \
+    && mv micro /usr/bin/
+
+# snap does not work just after installation?
+#apt install -y snapd && snap install micro --classic
+
