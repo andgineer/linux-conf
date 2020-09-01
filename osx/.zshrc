@@ -31,3 +31,19 @@ function port-proc {
     lsof -nP -iTCP:"$port" | grep LISTEN
 }
 
+function dockerhubrefresh {
+    for image in python python-base matplotlib iot-calendar openhab-synology allure amazon-dash-button-hack; do
+      docker pull andgineer/$image
+      docker image rm andgineer/$image
+    done
+}
+
+function dockerstop {
+     docker stop $(docker ps -a -q)
+}
+
+function dockerprune {
+    docker system prune --force
+    docker volume prune --force
+    docker image prune --force
+}
