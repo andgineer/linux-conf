@@ -47,3 +47,7 @@ function dockerprune {
     docker volume prune --force
     docker image prune --force
 }
+
+function sju {
+    ssh -L 9090:localhost:9090 remotehost_with_jupyter
+}
