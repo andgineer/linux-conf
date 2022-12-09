@@ -51,3 +51,18 @@ function dockerprune {
 function sju {
     ssh -L 9090:localhost:9090 remotehost_with_jupyter
 }
+
+function unsetproxy {
+	unset  https_proxy
+	unset  http_proxy
+	unset  no_proxy
+	unset  HTTPS_PROXY
+	unset  HTTP_PROXY
+	unset  NO_PROXY
+}
+
+function setproxy {
+	export HTTPS_PROXY="http://nibr-proxy.global.nibr.novartis.net:2011"
+	export {HTTP_PROXY,http_proxy,https_proxy}="${HTTPS_PROXY}"
+	export {NO_PROXY,no_proxy}="localhost,127.0.0.1,*.nibr.novartis.net"
+}
