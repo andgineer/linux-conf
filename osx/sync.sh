@@ -9,7 +9,7 @@ rsync \
         --delete \
         /Users/sorokan6/Documents/ \
         "/Users/sorokan6/Library/CloudStorage/OneDrive-Personal/Documents" \
-        >> /Users/sorokan6/sync.log
+        2>> /Users/sorokan6/sync.log
 
 rsync \
         --archive \
@@ -18,4 +18,4 @@ rsync \
         --delete \
         "/Users/sorokan6/сербский/" \
         "/Users/sorokan6/Library/CloudStorage/OneDrive-Personal/сербский" \
-        >> /Users/sorokan6/sync.log
+        2>> /Users/sorokan6/sync.log
