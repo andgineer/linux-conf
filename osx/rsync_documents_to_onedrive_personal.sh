@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# rsync Obsidian folder from iCloud to OneDrive on EPAM
+# rsync Documents folder (OneDrive EPAM) to OneDrive Personal
 
 # Avoid direct using of the $HOME
 SCRIPTS_FOLDER=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
@@ -7,8 +7,8 @@ SCRIPTS_FOLDER=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pw
 # shellcheck source=./osx/vars.sh
 source "${SCRIPTS_FOLDER}/vars.sh"
 
-source="${home}/Library/Mobile Documents/iCloud~md~obsidian/Documents/anso-mobile/"
-min_size=300000
-target="${home}/Library/CloudStorage/OneDrive-EPAM/backup/obsidian/anso-mobile"
+source="${home}/Library/CloudStorage/OneDrive-EPAM/Documents/"
+min_size=50000
+target="${home}/Library/CloudStorage/OneDrive-Personal/backup/Documents"
 
 "${SCRIPTS_FOLDER}/rsync.sh" "${source}" "${target}" "${min_size}" "${sync_log}" "$fail"

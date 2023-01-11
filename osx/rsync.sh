@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # call this scripts as
-#   rsync.sh "${source}" "${target}" "${min_size}" "${log}" "$fail"
+#   rsync.sh "${source}" "${target}" "${min_size}" "${sync_log}" "$fail"
 #
 # sync $source to $target if it is bigger that $min_size
 # log sync dates and rsync errors to $log file
@@ -9,11 +9,10 @@
 source="$1"
 target="$2"
 min_size="$3"
-log="$4"
+sync_log="$4"
 fail="$5"
 
-echo ""  >> "${log}"
-date >> "${log}"
+echo $(date) "${target}"  >> "${sync_log}"
 
 size=$(du -kc "${source}" | tail -1 | cut -f1)
 
@@ -25,7 +24,7 @@ rsync \
         --delete \
         "${source}" \
         "${target}" \
-        2>> "${log}"
+        2>> "${sync_log}"
 else
   # shellcheck disable=SC2129
   echo "" >> "${fail}"

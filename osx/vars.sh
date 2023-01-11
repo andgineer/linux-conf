@@ -10,3 +10,4 @@ else  # scripts folder is one level down $HOME
 fi
 
 sync_log="${home}/sync.log"
+fail="${home}/FAIL.txt"
