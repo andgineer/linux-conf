@@ -9,5 +9,7 @@ else  # scripts folder is one level down $HOME
   home=$( dirname "$SCRIPTS_FOLDER")
 fi
 
-sync_log="${home}/sync.log"
-fail="${home}/FAIL.txt"
+sync_logs_folder="${home}/logs/sync"
+mkdir -p "${sync_logs_folder}"
+sync_log="${sync_logs_folder}/$(date +"%Y-%m-%d").log"
+fail="${sync_logs_folder}/_fail.txt"

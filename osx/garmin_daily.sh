@@ -6,8 +6,9 @@ SCRIPTS_FOLDER=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pw
 
 # shellcheck source=./osx/vars.sh
 source "${SCRIPTS_FOLDER}/vars.sh"
+# shellcheck source=./osx/.garminsecrets
+source "${home}/.garminsecrets"
 
 echo $(date) "garmin-daily" >> "${sync_log}"
-env GARMIN_PASSWORD="****" GARMIN_EMAIL="filbert@yandex.com" \
-  "/Users/Andrei_Sorokin2/Library/CloudStorage/OneDrive-EPAM/projects/learn/garmin-daily/venv/bin/garmin-daily" \
+"/Users/Andrei_Sorokin2/Library/CloudStorage/OneDrive-EPAM/projects/learn/garmin-daily/venv/bin/garmin-daily" \
   >> "${sync_log}"

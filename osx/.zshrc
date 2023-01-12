@@ -6,6 +6,7 @@ plugins=(git tmux tmuxinator fasd pip virtualenv)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status virtualenv)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.garminsecrets
 
 export EDITOR='micro'
 
