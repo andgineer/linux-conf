@@ -63,7 +63,7 @@ function unsetproxy {
 }
 
 function setproxy {
-	export HTTPS_PROXY="http://nibr-proxy.global.nibr.novartis.net:2011"
+	export HTTPS_PROXY="***"
 	export {HTTP_PROXY,http_proxy,https_proxy}="${HTTPS_PROXY}"
-	export {NO_PROXY,no_proxy}="localhost,127.0.0.1,*.nibr.novartis.net"
+	export {NO_PROXY,no_proxy}="localhost,127.0.0.1"
 }
