@@ -7,6 +7,8 @@ env EDITOR=nano crontab -e
 0 17 * * * /Users/Andrei_Sorokin2/scripts/rsync_icloud_obsidian_to_onedrive_personal.sh
 0 10 * * * /Users/Andrei_Sorokin2/scripts/garmin_daily.sh
 
+30 11 * * 5 /Users/Andrei_Sorokin2/scripts/arch_obsidian.sh
+
 # Open System Preferences from the  Apple menu, then choose “Security & Privacy”
 # Go to the “Privacy” tab, then select “Full Disk Access” from the side menu options
 # Click the lock icon in the corner and authenticate with an admin password to grant permission to modify Full Disk Access settings

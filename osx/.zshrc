@@ -7,6 +7,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.garminsecrets
+alias ls="exa -lah"
 
 export EDITOR='micro'
 
