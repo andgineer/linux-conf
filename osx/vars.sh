@@ -1,5 +1,6 @@
 #!/bin/bash
 
+IAM=$(whoami)
 SCRIPTS_FOLDER=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # Avoid direct using of the $HOME
