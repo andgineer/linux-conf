@@ -45,9 +45,9 @@ function dockerstop {
 }
 
 function dockerprune {
-    docker system prune --force
-    docker volume prune --force
-    docker image prune --force
+    docker system prune --force -a --filter "until=24h"
+    docker volume prune --force -a --filter "until=24h"
+    docker image prune --force -a --filter "until=24h"
 }
 
 function sju {
