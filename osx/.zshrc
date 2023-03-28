@@ -2,6 +2,10 @@ ZSH_THEME="agnoster"
 export DEFAULT_USER=`whoami`
 export ZSH_DISABLE_COMPFIX=true
 
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+
 plugins=(git tmux tmuxinator fasd pip virtualenv)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status virtualenv)
 
