@@ -6,11 +6,11 @@ env EDITOR=nano crontab -e
 
 #0 17 * * * /Users/Andrei_Sorokin2/scripts/rsync_icloud_obsidian_to_onedrive_personal.sh
 #0 10 * * * /Users/Andrei_Sorokin2/scripts/garmin_daily.sh
-0 10 * * * /Users/ksfj595/scripts/garmin_daily.sh
+0 10 * * * /Users/$whoami/scripts/garmin_daily.sh
 
 #30 11 * * 5 /Users/Andrei_Sorokin2/scripts/arch_obsidian.sh
-#40 11 * * 5 /Users/Andrei_Sorokin2/scripts/arch_shelf.sh
-#50 11 * * 5 /Users/Andrei_Sorokin2/scripts/arch_documents.sh
+40 11 * * 5 /Users/$whoami/scripts/arch_shelf.sh
+50 11 * * 5 /Users/$whoami/scripts/arch_documents.sh
 
 # Open System Preferences from the  Apple menu, then choose “Security & Privacy”
 # Go to the “Privacy” tab, then select “Full Disk Access” from the side menu options

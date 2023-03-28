@@ -14,3 +14,10 @@ sync_logs_folder="${home}/logs/sync"
 mkdir -p "${sync_logs_folder}"
 sync_log="${sync_logs_folder}/$(date +"%Y-%m-%d").log"
 fail="${sync_logs_folder}/_fail.txt"
+
+send_fail_email()
+# argument - email body
+{
+    echo $1 | mail -s "MacBook Sync failed" filbert@yandex.ru
+    exit
+}
