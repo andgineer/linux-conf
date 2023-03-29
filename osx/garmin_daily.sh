@@ -12,3 +12,7 @@ source "${home}/.garminsecrets"
 echo $(date) "garmin-daily" >> "${sync_log}"
 "/Users/${IAM}/Library/CloudStorage/OneDrive-EPAM/projects/learn/garmin-daily/venv/bin/garmin-daily" \
   >> "${sync_log}"
+
+if [ $? -ne 0 ]; then
+    send_fail_email "Failed to send Garmin Connect data to google sheets"
+fi

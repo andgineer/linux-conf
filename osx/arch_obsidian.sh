@@ -11,3 +11,7 @@ source="${home}/Library/Mobile Documents/iCloud~md~obsidian/Documents"
 target="${home}/Library/CloudStorage/OneDrive-EPAM/backup"
 
 tar -czf "${target}/obsidian-$(date +'%Y-%m-%d').tar"  -C "${source}" anso-mobile
+
+if [ $? -ne 0 ]; then
+    send_fail_email "Failed to create Obsidian archive"
+fi

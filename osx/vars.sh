@@ -19,5 +19,4 @@ send_fail_email()
 # argument - email body
 {
     echo $1 | mail -s "MacBook Sync failed" filbert@yandex.ru
-    exit
 }
