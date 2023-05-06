@@ -13,6 +13,9 @@ source $ZSH/oh-my-zsh.sh
 source ~/.garminsecrets
 alias ls="exa -lah"
 
+bindkey '[C' forward-word
+bindkey '[D' backward-word
+
 export EDITOR='micro'
 
 __conda_setup="$('/Library/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
