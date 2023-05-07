@@ -13,8 +13,20 @@ source $ZSH/oh-my-zsh.sh
 source ~/.garminsecrets
 alias ls="exa -lah"
 
+# Alt-left/righ arrow move by word
 bindkey '[C' forward-word
 bindkey '[D' backward-word
+
+# Alt-Shift-left delete a full WORD (including colon, dot, comma, quotes...)
+# Too often I press Cmd-W instead of Ctrl-W so I prefer non-standard combination
+my-backward-kill-word () {
+      # Add colon, comma, single/double quotes to word chars
+      local WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>:,"'"'"
+      zle -f kill # Append to the kill ring on subsequent kills.
+      zle backward-kill-word
+}
+zle -N my-backward-kill-word
+bindkey '^[[1;10D' my-backward-kill-word
 
 export EDITOR='micro'
 
