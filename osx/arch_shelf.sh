@@ -7,7 +7,7 @@ SCRIPTS_FOLDER=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pw
 # shellcheck source=./osx/vars.sh
 source "${SCRIPTS_FOLDER}/vars.sh"
 
-source="${home}/Library/CloudStorage/OneDrive-EPAM"
+source="${home}"
 target="${home}/Library/CloudStorage/OneDrive-EPAM/backup"
 
 tar -czf "${target}/shelf-$(date +'%Y-%m-%d').tar"  -C "${source}" shelf
