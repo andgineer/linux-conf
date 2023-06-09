@@ -10,7 +10,7 @@ source "${SCRIPTS_FOLDER}/vars.sh"
 source "${home}/.garminsecrets"
 
 echo $(date) "garmin-daily" >> "${sync_log}"
-"/Users/${IAM}/Library/CloudStorage/OneDrive-EPAM/projects/learn/garmin-daily/venv/bin/garmin-daily" \
+"/Users/${IAM}/projects/learn/garmin-daily/venv/bin/garmin-daily" \
   >> "${sync_log}"
 
 if [ $? -ne 0 ]; then

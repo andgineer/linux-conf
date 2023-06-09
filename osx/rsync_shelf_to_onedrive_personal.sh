@@ -7,7 +7,7 @@ SCRIPTS_FOLDER=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pw
 # shellcheck source=./osx/vars.sh
 source "${SCRIPTS_FOLDER}/vars.sh"
 
-source="${home}/Library/CloudStorage/OneDrive-EPAM/shelf/"
+source="${home}/shelf/"
 min_size=3000000
 target="${home}/Library/CloudStorage/OneDrive-Personal/backup/shelf"
 
