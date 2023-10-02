@@ -11,6 +11,7 @@ source "${home}/.garminsecrets"
 
 echo $(date) "garmin-daily" >> "${sync_log}"
 "/Users/${IAM}/projects/learn/garmin-daily/venv/bin/garmin-daily" \
+  -g mon -g wed -g fri \
   >> "${sync_log}"
 
 if [ $? -ne 0 ]; then
