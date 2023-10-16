@@ -2,6 +2,10 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 
+export PROGRESS_NO_TRUNC=1
+export DOCKER_BUILDKIT=0
+export BUILDKIT_PROGRESS=plain
+
 export AWS_PROFILE=dev
 export AWS_PAGER=""
 export AWS_REGION="eu-west-1"
