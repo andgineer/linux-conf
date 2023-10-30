@@ -165,3 +165,26 @@ function dockerprune {
 
 eval "$(saml2aws --completion-script-zsh)"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+
+function git-remote() {
+    # Check if inside a git repository
+    if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+        echo "Not inside a Git repository!"
+        return 1
+    fi
+
+    # Extract the current push URL for origin
+    push_url=$(git remote get-url --push origin)
+
+    # Check if the URL contains "github.com"
+    if [[ $push_url == *git@github.com* ]]; then
+        # Construct the new URL by replacing "github.com" with "github-and"
+        new_push_url="${push_url/git@github.com/git@github-and}"
+
+        # Set the new push URL
+        git remote set-url origin --push "$new_push_url"
+        echo "Push URL changed to $new_push_url"
+    else
+        echo "Push URL does not contain 'git@github.com'. No changes made."
+    fi
+}
