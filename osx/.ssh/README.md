@@ -1,6 +1,6 @@
 ```bash
-ssh-keygen -t rsa -C "andrei.sorokin@astrazeneca.com"
-ssh-keygen -t rsa -C "andrey@sorokin.engineer"
+ssh-keygen -t rsa -C "andrei.sorokin-at-astrazeneca.com"
+ssh-keygen -t rsa -C "andrey-at-sorokin.engineer"
 ```
 second one to file `~/.ssh/andgineer`
 
