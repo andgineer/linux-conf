@@ -7,9 +7,7 @@ env EDITOR=nano crontab -e
 #0 17 * * * /Users/Andrei_Sorokin2/scripts/rsync_icloud_obsidian_to_onedrive_personal.sh
 
 20 6 * * * /Users/$whoami/scripts/garmin_daily.sh
-
 30 6 * * 5 /Users/$whoami/scripts/arch_obsidian.sh
-15 6 * * 5 /Users/$whoami/scripts/arch_shelf.sh
 20 6 * * 5 /Users/$whoami/scripts/arch_documents.sh
 25 6 1-7 * 5 /Users/$whoami/scripts/arch_shelf.sh
 
