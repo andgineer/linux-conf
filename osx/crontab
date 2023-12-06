@@ -8,7 +8,7 @@ env EDITOR=nano crontab -e
 
 20 6 * * * /Users/$whoami/scripts/garmin_daily.sh
 30 6 * * 5 /Users/$whoami/scripts/arch_obsidian.sh
-20 6 * * 5 /Users/$whoami/scripts/arch_documents.sh
+20 6 * * * /Users/$whoami/scripts/arch_documents.sh
 25 6 1-7 * 5 /Users/$whoami/scripts/arch_shelf.sh
 
 # Open System Preferences from the  Apple menu, then choose “Security & Privacy”
