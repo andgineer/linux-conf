@@ -17,7 +17,7 @@ export CFLAGS="-I/opt/homebrew/opt/freetds/include"
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
 
 source ~/.garminsecrets
-alias ls="exa -lah"
+alias ls="eza -lah"
 
 eval $(luarocks path)
 
