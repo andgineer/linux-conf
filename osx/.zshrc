@@ -78,6 +78,10 @@ function dockerprune {
     docker image prune --force -a --filter "until=24h"
 }
 
+function dockerkill {
+    docker system prune -a --volumes
+}
+
 eval "$(saml2aws --completion-script-zsh)"
 export PATH="$(pyenv root)/shims:/usr/local/opt/libpq/bin:$PATH"
 
