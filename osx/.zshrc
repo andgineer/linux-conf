@@ -5,7 +5,8 @@ export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 
 export PROGRESS_NO_TRUNC=1
-export DOCKER_BUILDKIT=0
+export BUILDKIT_STEP_LOG_MAX_SIZE=-1
+export BUILDKIT_STEP_LOG_MAX_TOTAL=-1
 export BUILDKIT_PROGRESS=plain
 
 export AWS_PROFILE=dev
