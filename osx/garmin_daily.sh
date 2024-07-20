@@ -10,7 +10,7 @@ source "${SCRIPTS_FOLDER}/vars.sh"
 source "${home}/.garminsecrets"
 
 echo $(date) "garmin-daily" >> "${sync_log}"
-"/Users/${IAM}/projects/learn/garmin-daily/venv/bin/garmin-daily" \
+"/Users/${IAM}/projects/garmin-daily/.venv/bin/garmin-daily" \
   -g mon -g wed -g fri -g sat \
   >> "${sync_log}"
 
