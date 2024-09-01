@@ -108,4 +108,10 @@ function git-remote() {
         echo "Push URL does not contain 'git@github.com'. No changes made."
     fi
 }
+
+function anaconda() {
+    source "$HOME/anaconda3/bin/activate"
+    conda init
+}
+
 eval "$(rbenv init - zsh)"
