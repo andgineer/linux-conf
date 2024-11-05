@@ -11,7 +11,7 @@ source "${home}/.garminsecrets"
 
 echo $(date) "garmin-daily" >> "${sync_log}"
 "/Users/${IAM}/projects/garmin-daily/.venv/bin/garmin-daily" \
-  -g mon -g wed -g fri -g sat \
+  -g mon -g wed -g fri -l "roller=Телеп" \
   >> "${sync_log}"
 
 if [ $? -ne 0 ]; then
