@@ -32,6 +32,13 @@ export DEFAULT_USER=`whoami`
 bindkey '[C' forward-word
 bindkey '[D' backward-word
 
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR="zed --wait"
+else
+  export EDITOR="zed --wait"
+fi
+
 # Alt-Shift-left delete a full WORD (including colon, dot, comma, quotes...)
 # Too often I press Cmd-W instead of Ctrl-W so I prefer non-standard combination
 my-backward-kill-word () {
