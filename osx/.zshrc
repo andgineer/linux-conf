@@ -17,6 +17,8 @@ export LDFLAGS="-L/opt/homebrew/opt/freetds/lib -L/opt/homebrew/opt/openssl@3/li
 export CFLAGS="-I/opt/homebrew/opt/freetds/include"
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
 
+export LEXIFLUX_ALLOWED_HOSTS="andreis-macbook-pro.tail1e48d.ts.net,localhost"
+
 source ~/.garminsecrets
 alias ls="eza -lah"
 
